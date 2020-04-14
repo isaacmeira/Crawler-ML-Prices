@@ -1,5 +1,7 @@
 # Crawler-ML-Prices
 
+Buscador de produtos no mercado livre
+
 # Iniciando
 
 Faça o clone ou download desse projeto, após isso, entre com o terminal na pasta raiz, 
