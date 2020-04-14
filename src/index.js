@@ -23,19 +23,14 @@ app.post('/', async  (req, res)  => {
     }
   }
 
- await rp(options)
-  .then(($) => {
-      $('#searchResults li.article').each((index, item) => {
+  const $ = await rp(options);
+    $('#searchResults li.article').each((index, item) => {
      if(index < int ) {
      $(item).find('div.rowItem').attr('id').match('PAD') ? '' :
         ids.push($(item).find('div.rowItem').attr('id'));     
       }         
    })
-  })
-
-  await  receiveData();
-
-  
+  await receiveData();
   return res.json(catchedData)
  
 })
@@ -83,4 +78,4 @@ async function getStoreName() {
  
 app.listen(3333, () => {
   console.log('Backend Started 👌');
-})
+}) 
